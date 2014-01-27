@@ -1,0 +1,27 @@
+#spacer{
+/* use this to move the Ad around the screen */  
+    height:950px;
+  
+}
+#status{
+  position:fixed;
+  top:0;
+  left:0;
+  padding:5px 20px;
+  min-width:150px;
+  background:black;
+  color:white;
+  border:3px double white;
+}
+ body{
+  height:10000px;
+}
+#ad_content{
+
+	width:310px;
+	height:265px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	border: 1;
+	overflow: hidden;
+}
