@@ -66,6 +66,34 @@ function extractClientRect(element, viewport) {
   
 }
 
+//extract the details of the parent node if available
+function getParentNode(element) {
+
+	if (element) {
+	
+		var parentNode = element.parent;
+		
+		if (parentNode) {
+		
+			return parentNode;
+			
+		}
+		else {
+		
+			return false;
+			
+		}
+	}
+	else {
+	
+		return false;
+		
+	}
+}
+
+
+
+
 
 
 //This kicks everything off
@@ -77,6 +105,8 @@ function extractClientRect(element, viewport) {
    var ieSize = displayWindowSize();
    var chromeSize = displayWindowSizeGeneric();
    var statusBox = document.getElementById("status");
+   var parentNode = getParentNode(statusBox);
+  
   
 	console.log('--' + counter + '--');
     //viewport stats
@@ -92,6 +122,7 @@ function extractClientRect(element, viewport) {
        
     console.log("Bottom Offset: " + clientRectIE.bottom);
     console.log("Viewable: " + clientRectIE.isViewable);
+	console.log("parentNode: " + parentNode);
  
    counter++;
     
